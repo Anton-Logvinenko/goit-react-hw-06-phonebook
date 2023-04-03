@@ -7,7 +7,8 @@ import{getContactsState, getFiltersState} from '../../redux/selectors'
 
 function ContactList() {
   const contacts = useSelector(getContactsState);
-  const nameFilter= useSelector(getFiltersState)
+console.log('contacts', contacts)
+  const nameFilter= useSelector(getFiltersState);
   
   const dispatch = useDispatch();
 
@@ -21,6 +22,7 @@ function ContactList() {
   };
   // отфильтрованный список для рендера
    const visibleContacts = getVisibleContacts()
+   console.log('visibleContacts',visibleContacts)
 
   return (
     <ul className={css.contactList}>
